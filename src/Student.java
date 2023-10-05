@@ -5,6 +5,7 @@ public class Student {
     String studentName;
     String studentNumber;
     String studentEmail;
+    Set<String> enrolledCourses = new HashSet<>();
 
     public String getStudentName() {
         return studentName;
@@ -30,4 +31,11 @@ public class Student {
         this.studentEmail = studentEmail;
     }
 
+    public Set<String> getEnrolledCourses() {
+        return enrolledCourses;
+    }
+
+    public void setEnrolledCourses(Set<String> enrolledCourses) {
+        this.enrolledCourses = enrolledCourses;
+    }
 }
