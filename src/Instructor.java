@@ -1,41 +1,27 @@
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class Instructor {
-    String instructorName;
-    String instructorNumber;
-    String instructorEmail;
+
+    String name;
+    int number;
+    String email;
     Set<String> taughtCourses = new HashSet<>();
 
-    public String getInstructorName() {
-        return instructorName;
+    public Instructor(String name, int number, String email) {
+        this.name = name;
+        this.number = number;
+        this.email = email;
     }
 
-    public void setInstructorName(String instructorName) {
-        this.instructorName = instructorName;
+    public String getName() {
+        return name;
     }
 
-    public String getInstructorNumber() {
-        return instructorNumber;
+    public int getNumber() {
+        return number;
     }
 
-    public void setInstructorNumber(String instructorNumber) {
-        this.instructorNumber = instructorNumber;
-    }
-
-    public String getInstructorEmail() {
-        return instructorEmail;
-    }
-
-    public void setInstructorEmail(String instructorEmail) {
-        this.instructorEmail = instructorEmail;
-    }
-
-    public Set<String> getTaughtCourses() {
-        return taughtCourses;
-    }
-
-    public void setTaughtCourses(Set<String> taughtCourses) {
-        this.taughtCourses = taughtCourses;
+    public String getEmail() {
+        return email;
     }
 }
