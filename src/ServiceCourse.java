@@ -1,12 +1,12 @@
-public class ServiceCourse {
+import java.util.*;
 
-//    private Course course;
-/*    public ServiceCourse(Course course) {
-        this.course = course;
-    }   */
+public class ServiceCourses {
+    Set<Course> courseList= new HashSet<>();
+    Map<Integer, Course> numberPairing = new HashMap<>();
 
-    public void view(){
-        // kursun ayrıntılarının görüntülenmesini sağlar.
+    public void listCourses(){
+        for(Course courses : courseList){
+            System.out.println("Kurs ismi: " + courses.getName());
+        }
     }
-
 }

@@ -1,12 +1,18 @@
-public class ServiceStudent {
+import java.util.*;
 
-//    private Student student;
-/*    public ServiceStudent(Student student){
-        this.student = student;
-    }   */
+public class ServiceStudent{
 
-    public void enroll(){
-        // öğrencinin kursa kaydolma işlemi gerçekleştirilir.
+    Set<Student> studentList= new HashSet<>();
+    Map<Integer,Student> numberPairing = new HashMap<>();
+
+    public void enrollCourse(Student student, Course course){
+        student.enrolledCourses.add(course.getName());
+    }
+
+    public void listStudent(){
+        for(Student students : studentList){
+            System.out.println("Ogrenci ismi: " + students.getName() + "  Aldığı dersler: " + students.enrolledCourses);
+        }
     }
 
 }
