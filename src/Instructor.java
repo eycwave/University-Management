@@ -2,26 +2,38 @@ import java.util.*;
 
 public class Instructor {
 
-    String name;
-    int number;
-    String email;
-    Set<String> taughtCourses = new HashSet<>();
+    private String name;
+    private int number;
+    private String email;
+    private Set<String> taughtCourses = new HashSet<>();
 
-    public Instructor(String name, int number, String email) {
-        this.name = name;
-        this.number = number;
-        this.email = email;
+    public Instructor() {
+        this.name = "Bilinmiyor";
+        this.number = 0;
+        this.email = "Bilinmiyor";
     }
 
     public String getName() {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public int getNumber() {
         return number;
     }
 
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
     public String getEmail() {
         return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
