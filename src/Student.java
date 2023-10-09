@@ -2,33 +2,39 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Student {
-    private String studentName;
-    private String studentNumber;
-    private String studentEmail;
-    Set<String> enrolledCourses = new HashSet<>();
+    private String name;
+    private int number;
+    private String email;
+    private Set<String> enrolledCourses = new HashSet<>();
 
-    public String getStudentName() {
-        return studentName;
+    public Student() {
+        this.name = "Bilinmiyor";
+        this.number = 0;
+        this.email = "Bilinmiyor";
     }
 
-    public void setStudentName(String studentName) {
-        this.studentName = studentName;
+    public String getName() {
+        return name;
     }
 
-    public String getStudentNumber() {
-        return studentNumber;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setStudentNumber(String studentNumber) {
-        this.studentNumber = studentNumber;
+    public int getNumber() {
+        return number;
     }
 
-    public String getStudentEmail() {
-        return studentEmail;
+    public void setNumber(int number) {
+        this.number = number;
     }
 
-    public void setStudentEmail(String studentEmail) {
-        this.studentEmail = studentEmail;
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public Set<String> getEnrolledCourses() {
