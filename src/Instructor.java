@@ -36,4 +36,12 @@ public class Instructor {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public Set<String> getTaughtCourses() {
+        return taughtCourses;
+    }
+
+    public void setTaughtCourses(Set<String> taughtCourses) {
+        this.taughtCourses = taughtCourses;
+    }
 }
