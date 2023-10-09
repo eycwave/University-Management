@@ -2,9 +2,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Student {
-    String studentName;
-    String studentNumber;
-    String studentEmail;
+    private String studentName;
+    private String studentNumber;
+    private String studentEmail;
     Set<String> enrolledCourses = new HashSet<>();
 
     public String getStudentName() {
