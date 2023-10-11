@@ -1,16 +1,18 @@
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class Student {
     private String name;
     private int number;
     private String email;
-    private Set<String> enrolledCourses = new HashSet<>();
+    private Set<Course> enrolledCourses = new HashSet<>();
 
     public Student() {
-        this.name = "Bilinmiyor";
-        this.number = 0;
-        this.email = "Bilinmiyor";
+    }
+
+    public Student(String name, int number, String email) {
+        this.name = name;
+        this.number = number;
+        this.email = email;
     }
 
     public String getName() {
@@ -37,11 +39,11 @@ public class Student {
         this.email = email;
     }
 
-    public Set<String> getEnrolledCourses() {
+    public Set<Course> getEnrolledCourses() {
         return enrolledCourses;
     }
 
-    public void setEnrolledCourses(Set<String> enrolledCourses) {
+    public void setEnrolledCourses(Set<Course> enrolledCourses) {
         this.enrolledCourses = enrolledCourses;
     }
 }
