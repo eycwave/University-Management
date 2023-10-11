@@ -1,11 +1,17 @@
-public class Course {
+import java.util.*;
 
+public class Course {
     private String name;
     private int number;
+    private Set<Instructor> courseInstructor = new HashSet<>();
+    private Set<Student> enrolledStudents = new HashSet<>();
 
     public Course() {
-        this.name = "Bilinmiyor";
-        this.number = 0;
+    }
+
+    public Course(String name, int number) {
+        this.name = name;
+        this.number = number;
     }
 
     public String getName() {
@@ -22,5 +28,21 @@ public class Course {
 
     public void setNumber(int number) {
         this.number = number;
+    }
+
+    public Set<Instructor> getCourseInstructor() {
+        return courseInstructor;
+    }
+
+    public void setCourseInstructor(Set<Instructor> courseInstructor) {
+        this.courseInstructor = courseInstructor;
+    }
+
+    public Set<Student> getEnrolledStudents() {
+        return enrolledStudents;
+    }
+
+    public void setEnrolledStudents(Set<Student> enrolledStudents) {
+        this.enrolledStudents = enrolledStudents;
     }
 }
