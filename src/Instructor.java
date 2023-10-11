@@ -1,16 +1,18 @@
 import java.util.*;
 
 public class Instructor {
-
     private String name;
     private int number;
     private String email;
-    private Set<String> taughtCourses = new HashSet<>();
+    private Set<Course> taughtCourses = new HashSet<>();
 
     public Instructor() {
-        this.name = "Bilinmiyor";
-        this.number = 0;
-        this.email = "Bilinmiyor";
+    }
+
+    public Instructor(String name, int number, String email) {
+        this.name = name;
+        this.number = number;
+        this.email = email;
     }
 
     public String getName() {
@@ -37,11 +39,11 @@ public class Instructor {
         this.email = email;
     }
 
-    public Set<String> getTaughtCourses() {
+    public Set<Course> getTaughtCourses() {
         return taughtCourses;
     }
 
-    public void setTaughtCourses(Set<String> taughtCourses) {
+    public void setTaughtCourses(Set<Course> taughtCourses) {
         this.taughtCourses = taughtCourses;
     }
 }
