@@ -3,7 +3,7 @@ import java.util.*;
 public class Course {
     private String name;
     private int number;
-    private Set<Instructor> courseInstructor = new HashSet<>();
+    private Instructor courseInstructor;
     private Set<Student> enrolledStudents = new HashSet<>();
 
     public Course() {
@@ -30,11 +30,11 @@ public class Course {
         this.number = number;
     }
 
-    public Set<Instructor> getCourseInstructor() {
+    public Instructor getCourseInstructor() {
         return courseInstructor;
     }
 
-    public void setCourseInstructor(Set<Instructor> courseInstructor) {
+    public void setCourseInstructor(Instructor courseInstructor) {
         this.courseInstructor = courseInstructor;
     }
 
