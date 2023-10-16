@@ -1,19 +1,23 @@
 import java.util.*;
 
 public class CourseService {
-    Set<Course> courseList = new HashSet<>();
+    private Set<Course> courseList = new HashSet<>();
 
-    public void listCourse(){
-        for(Course course : courseList){
-            System.out.print("*Course name: " + course.getName() + " *Course instructor: ");
-            for(Instructor instructor : course.getCourseInstructor()){
-                System.out.print(instructor.getName() + " *Enrolled students: ");
-                for(Student students : course.getEnrolledStudents()){
-                    System.out.print(students.getName() + " ");
-                }
+    public void addCourse(Course course){
+        courseList.add(course);
+        System.out.println("Course added.");
+    }
+
+    public Course getCourseByID(int id){
+        for(Course c : courseList){
+            if(c.getNumber()==id){
+                return c;
             }
-            System.out.println(" ");
         }
-        System.out.println(" ");
+        return null;
+    }
+
+    public Set<Course> getCourseList(){
+        return courseList;
     }
 }

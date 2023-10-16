@@ -1,22 +1,33 @@
 import java.util.*;
 
 public class StudentService {
-    Set<Student> studentList = new HashSet<>();
+    private Set<Student> studentList = new HashSet<>();
 
-    public void enrollCourse(Student student, Course course){
-        student.getEnrolledCourses().add(course);
-        course.getEnrolledStudents().add(student);
+    public void addStudent(Student student){
+        studentList.add(student);
+        System.out.println("Student added.");
     }
 
-    public void listStudent(){
-        for(Student students : studentList){
-            System.out.print("*Student name: " + students.getName() + " *Enrolled courses: ");
-            for(Course courses : students.getEnrolledCourses()) {
-                System.out.print(courses.getName() + " ");
+    public Student getStudentByID(int id){
+        for(Student st : studentList){
+            if(st.getNumber()==id){
+                return st;
             }
-            System.out.println(" ");
         }
-        System.out.println(" ");
+        return null;
     }
 
+    public void enrollStudentToCourses(Course course, int studentID){
+        if(!course.getEnrolledStudents().contains(getStudentByID(studentID))){
+            getStudentByID(studentID).getEnrolledCourses().add(course);
+            course.getEnrolledStudents().add(getStudentByID(studentID));
+            System.out.println(getStudentByID(studentID).getName() + " enrolled to " + course.getName());
+        } else{
+            System.out.println(getStudentByID(studentID).getName() + " has already been enrolled this course.");
+        }
+    }
+
+    public Set<Student> getStudentList() {
+        return studentList;
+    }
 }
